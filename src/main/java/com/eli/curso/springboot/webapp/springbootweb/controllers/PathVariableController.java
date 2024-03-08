@@ -21,4 +21,12 @@ public class PathVariableController {
         return param;
     }
     
+    @GetMapping("mix/{message}/{code}")
+    public ParamDto mix(@PathVariable String message, @PathVariable Integer code) {
+        
+        ParamDto param = new ParamDto();
+        param.setMessage(message);
+        param.setCode(code);
+        return param;
+    }
 }
